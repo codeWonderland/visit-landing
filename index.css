@@ -46,23 +46,36 @@
 @media only screen and (max-width: 768px) {
   div.header-image img {
     display: none; } }
-.slide-overlay-image {
-  max-width: 85%; }
-  .slide-overlay-image p.slug {
+.slick-slide.double-slide:hover {
+  cursor: pointer; }
+.slick-slide.double-slide .slide-overlay-image {
+  max-width: 70%;
+  left: unset;
+  right: 4%; }
+  .slick-slide.double-slide .slide-overlay-image .slide-image img {
+    transition: 0.2s ease-out; }
+  .slick-slide.double-slide .slide-overlay-image:hover .slide-image img {
+    filter: brightness(85%);
+    -webkit-filter: brightness(85%); }
+  .slick-slide.double-slide .slide-overlay-image p.slug {
     line-height: 0;
     margin-bottom: 0;
-    color: #00a9e0; }
-  .slide-overlay-image p.slide-point {
+    color: #00a9e0;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+    font-weight: 700;
+    padding-top: 0.5rem; }
+  .slick-slide.double-slide .slide-overlay-image p.slide-point {
     margin-top: 7px; }
-
-div.button-grid {
+.slick-slide.double-slide div.button-grid {
   margin: 0.5rem 0; }
-  div.button-grid div {
+  .slick-slide.double-slide div.button-grid div {
     background: #00a9e0;
     padding: 0 1rem; }
-    div.button-grid div h2 {
+    .slick-slide.double-slide div.button-grid div h2 {
       color: white; }
-    div.button-grid div a {
+    .slick-slide.double-slide div.button-grid div a {
       color: white;
       text-decoration: underline; }
 
