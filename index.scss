@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300');
+
+@media only screen and (min-width: 768px) {
+
+  #content
+  {
+    margin-bottom: 0;
+  }
+
+  div.header-image
+  {
+    position: relative;
+
+    img
+    {
+      width: 100%;
+      height: auto;
+      padding: 0;
+    }
+
+    div.header-overlay
+    {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 0 1rem;
+      width: 64%;
+      background: rgba(230,230,230,0.75);
+
+      h1
+      {
+        font-weight: 300;
+        font-size: 4rem;
+      }
+    }
+
+    + *
+    {
+      clear: both;
+    }
+  }
+
+  @supports(display: grid)
+  {
+    div.button-grid
+    {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 140px;
+      grid-gap: 0.5rem;
+
+      div
+      {
+        background: #00a9e0;
+      }
+
+      div:last-child
+      {
+        grid-column: span 2;
+      }
+    }
+  }
+
+  .slide-overlay-image p {
+    font-size: 2rem;
+    color: #236192;
+  }
+
+  .slide-overlay-message a {
+    text-decoration: underline !important;
+
+    &:not(:hover)
+    {
+      color: white !important;
+    }
+  }
+
+  .card-component
+  {
+    margin: 0!important;
+  }
+}
+
+@media only screen and (max-width: 768px)
+{
+  div.header-image img
+  {
+    display: none;
+  }
+}
+
+.slide-overlay-image
+{
+  max-width: 85%;
+
+  p.slug
+  {
+    line-height: 0;
+    margin-bottom: 0;
+    color: #00a9e0;
+  }
+
+  p.slide-point
+  {
+    margin-top: 7px;
+  }
+}
+
+div.button-grid
+{
+  margin: 0.5rem 0;
+
+  div
+  {
+    background: #00a9e0;
+    padding: 0 1rem;
+
+    h2
+    {
+      color: white;
+    }
+
+    a
+    {
+      color: white;
+      text-decoration: underline;
+    }
+  }
+}
+
+.card-component .card-component-padded {
+  padding-top: 0;
+  padding-left: 1.5rem;
+
+  p
+  {
+    line-height: 26px;
+    letter-spacing: 0.15px;
+
+    span
+    {
+      font-size: 20px;
+
+      +br
+      {
+        line-height: 2;
+      }
+    }
+  }
+
+  a
+  {
+    background-color: #00a9e0 !important;
+    color: #fff !important;
+    text-decoration: underline !important;
+    padding: 5px 12px;
+    letter-spacing: 0.25px;
+    margin-top: 15px !important;
+    display: inline-block;
+  }
+}
