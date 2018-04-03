@@ -91,69 +91,100 @@
 
 .slick-slide.double-slide
 {
-  &:hover
-  {
-	cursor: pointer;
-  }
-
   .slide-overlay-image
   {
-	max-width: 70%;
-	left: unset;
-	right: 4%;
+    max-width: 70%;
+    left: unset;
+    right: 4%;
 
-	.slide-image img
-	{
-	  transition: 0.2s ease-out;
-	}
+    .slide-image img
+    {
+      transition: 0.2s ease-out;
+    }
 
-	&:hover
-	{
-	  .slide-image img
-	  {
-		filter: brightness(85%);
-		-webkit-filter: brightness(85%);
-	  }
-	}
+    &:hover
+    {
+      cursor: pointer;
 
-	p.slug
-	{
-	  line-height: 0;
-	  margin-bottom: 0;
-	  color: #00a9e0;
-	  font-size: 1.25rem;
-	  text-transform: uppercase;
-	  padding-bottom: 0.5rem;
-	  font-weight: 700;
-	  padding-top: 0.5rem;
-	}
+      .slide-image img
+      {
+        filter: brightness(85%);
+        -webkit-filter: brightness(85%);
+      }
 
-	p.slide-point
-	{
-	  margin-top: 7px;
-	}
+      p.slide-point a
+      {
+        text-decoration: underline;
+      }
+    }
+
+    p.slug
+    {
+      line-height: 0;
+      margin-bottom: 0;
+      color: #00a9e0;
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      padding-bottom: 0.5rem;
+      font-weight: 700;
+      padding-top: 0.5rem;
+    }
+
+    p.slide-point a
+    {
+      margin-top: 7px;
+
+      &:hover
+      {
+        text-decoration: underline;
+      }
+    }
   }
+}
 
-  div.button-grid
+div.button-grid
+{
+  margin: 0.5rem 0;
+
+  div
   {
-	margin: 0.5rem 0;
+    background: #00a9e0;
+    padding: 0 1rem;
 
-	div
-	{
-	  background: #00a9e0;
-	  padding: 0 1rem;
+    &:hover
+    {
+      background: #236192;
+      cursor: pointer;
 
-	  h2
-	  {
-		color: white;
-	  }
+      a
+      {
+        text-decoration: underline;
+      }
+    }
 
-	  a
-	  {
-		color: white;
-		text-decoration: underline;
-	  }
-	}
+    h2
+    {
+      color: white;
+    }
+
+    a
+    {
+      color: white;
+
+      &:before
+      {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-left: 10px solid white;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        float: left;
+        margin-right: 10px;
+        margin-top: 1px;
+      }
+    }
   }
 }
 
@@ -186,5 +217,21 @@
     letter-spacing: 0.25px;
     margin-top: 15px !important;
     display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    &:before
+    {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 10px solid white;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      float: left;
+      margin-right: 10px;
+      margin-top: 4px;
+    }
   }
 }
