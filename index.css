@@ -57,13 +57,14 @@
   .slick-slide.double-slide .slide-overlay-image:hover .slide-image img {
     filter: brightness(85%);
     -webkit-filter: brightness(85%); }
+  .slick-slide.double-slide .slide-overlay-image:hover p.slide-point {
+    text-decoration: underline; }
   .slick-slide.double-slide .slide-overlay-image p.slug {
     line-height: 0;
     margin-bottom: 0;
     color: #00a9e0;
     font-size: 1.25rem;
     text-transform: uppercase;
-    padding-bottom: 0.5rem;
     font-weight: 700;
     padding-top: 0.5rem; }
   .slick-slide.double-slide .slide-overlay-image p.slide-point {
