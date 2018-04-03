@@ -46,29 +46,36 @@
 @media only screen and (max-width: 768px) {
   div.header-image img {
     display: none; } }
+.slick-slide.double-slide .slide-overlay-container:hover .slide-image img {
+  filter: brightness(85%);
+  -webkit-filter: brightness(85%); }
 .slick-slide.double-slide .slide-overlay-image {
   max-width: 70%;
   left: unset;
   right: 4%; }
   .slick-slide.double-slide .slide-overlay-image .slide-image img {
     transition: 0.2s ease-out; }
-  .slick-slide.double-slide .slide-overlay-image:hover .slide-image img {
-    filter: brightness(85%);
-    -webkit-filter: brightness(85%); }
-  .slick-slide.double-slide .slide-overlay-image:hover p.slide-point {
-    text-decoration: underline; }
   .slick-slide.double-slide .slide-overlay-image p.slug {
     line-height: 0;
     margin-bottom: 0;
+    padding-bottom: 0;
     color: #00a9e0;
     font-size: 1.25rem;
     text-transform: uppercase;
     font-weight: 700;
     padding-top: 0.5rem; }
-  .slick-slide.double-slide .slide-overlay-image p.slide-point a {
-    margin-top: 7px; }
-    .slick-slide.double-slide .slide-overlay-image p.slide-point a:hover {
-      text-decoration: underline; }
+  .slick-slide.double-slide .slide-overlay-image p.slide-point {
+    margin-top: 1rem;
+    padding-bottom: 0;
+    margin-bottom: 1rem; }
+    .slick-slide.double-slide .slide-overlay-image p.slide-point a {
+      color: #236192 !important; }
+      @media only screen and (min-width: 768px) {
+        .slick-slide.double-slide .slide-overlay-image p.slide-point a {
+          font-size: 2rem; } }
+      .slick-slide.double-slide .slide-overlay-image p.slide-point a:hover {
+        color: #236192 !important;
+        text-decoration: underline; }
 
 div.button-grid {
   margin: 0.5rem 0; }
@@ -83,7 +90,8 @@ div.button-grid {
     div.button-grid div h2 {
       color: white; }
     div.button-grid div a {
-      color: white; }
+      color: white;
+      text-transform: uppercase; }
       div.button-grid div a:before {
         content: '';
         display: block;
@@ -96,6 +104,10 @@ div.button-grid {
         margin-right: 10px;
         margin-top: 1px; }
 
+.card-component.card-component-theme-white:hover {
+  border: 0; }
+  .card-component.card-component-theme-white:hover a {
+    text-decoration: underline !important; }
 .card-component .card-component-padded {
   padding-top: 0;
   padding-left: 1.5rem; }
@@ -109,7 +121,6 @@ div.button-grid {
   .card-component .card-component-padded a {
     background-color: #00a9e0 !important;
     color: #fff !important;
-    text-decoration: underline !important;
     padding: 5px 12px;
     letter-spacing: 0.25px;
     margin-top: 15px !important;
