@@ -31,7 +31,12 @@
       div.button-grid div {
         background: #00a9e0; }
       div.button-grid div:last-child {
-        grid-column: span 2; } }
+        grid-column: span 2; } } }
+@media only screen and (min-width: 768px) and (max-width: 768px) {
+  div.button-grid div {
+    padding: 1rem;
+    margin: 1rem 0; } }
+@media only screen and (min-width: 768px) {
   .slide-overlay-image p {
     font-size: 2rem;
     color: #236192; }
@@ -56,7 +61,6 @@
   .slick-slide.double-slide .slide-overlay-image .slide-image img {
     transition: 0.2s ease-out; }
   .slick-slide.double-slide .slide-overlay-image p.slug {
-    line-height: 0;
     margin-bottom: 0;
     padding-bottom: 0;
     color: #00a9e0;
@@ -64,6 +68,9 @@
     text-transform: uppercase;
     font-weight: 700;
     padding-top: 0.5rem; }
+    @media only screen and (min-width: 768px) {
+      .slick-slide.double-slide .slide-overlay-image p.slug {
+        line-height: 0; } }
   .slick-slide.double-slide .slide-overlay-image p.slide-point {
     margin-top: 1rem;
     padding-bottom: 0;
@@ -88,10 +95,12 @@ div.button-grid {
       div.button-grid div:hover a {
         text-decoration: underline; }
     div.button-grid div h2 {
-      color: white; }
+      color: white;
+      font-size: 25px; }
     div.button-grid div a {
       color: white;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      font-size: 17px; }
       div.button-grid div a:before {
         content: '';
         display: block;
@@ -104,18 +113,24 @@ div.button-grid {
         margin-right: 10px;
         margin-top: 1px; }
 
-.card-component.card-component-theme-white:hover {
-  border: 0; }
-  .card-component.card-component-theme-white:hover a {
-    text-decoration: underline !important; }
+@media only screen and (max-width: 768px) {
+  .card-component {
+    padding: 0 1rem; } }
+.card-component.card-component-theme-white {
+  border: 0 !important; }
+  .card-component.card-component-theme-white:hover {
+    border: 0; }
+    .card-component.card-component-theme-white:hover a {
+      text-decoration: underline !important; }
 .card-component .card-component-padded {
   padding-top: 0;
   padding-left: 1.5rem; }
   .card-component .card-component-padded p {
     line-height: 26px;
-    letter-spacing: 0.15px; }
+    letter-spacing: 0.15px;
+    font-size: 17px; }
     .card-component .card-component-padded p span {
-      font-size: 20px; }
+      font-size: 21px; }
       .card-component .card-component-padded p span + br {
         line-height: 2; }
   .card-component .card-component-padded a {
