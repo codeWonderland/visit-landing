@@ -48,9 +48,6 @@
 
   .card-component {
     margin: 0 !important; } }
-@media only screen and (max-width: 768px) {
-  div.header-image img {
-    display: none; } }
 .slick-slide.double-slide .slide-overlay-container:hover .slide-image img {
   filter: brightness(85%);
   -webkit-filter: brightness(85%); }
@@ -71,6 +68,9 @@
     @media only screen and (min-width: 768px) {
       .slick-slide.double-slide .slide-overlay-image p.slug {
         line-height: 0; } }
+    @media only screen and (max-width: 768px) {
+      .slick-slide.double-slide .slide-overlay-image p.slug {
+        display: none; } }
   .slick-slide.double-slide .slide-overlay-image p.slide-point {
     margin-top: 1rem;
     padding-bottom: 0;
@@ -88,7 +88,13 @@ div.button-grid {
   margin: 0.5rem 0; }
   div.button-grid div {
     background: #00a9e0;
-    padding: 0 1rem; }
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0; }
+    @media only screen and (min-width: 768px) {
+      @supports (display: grid) {
+        div.button-grid div {
+          padding: 0 1rem;
+          margin: 0; } } }
     div.button-grid div:hover {
       background: #236192;
       cursor: pointer; }
@@ -116,6 +122,26 @@ div.button-grid {
 @media only screen and (max-width: 768px) {
   .card-component {
     padding: 0 1rem; } }
+.card-component a {
+  background-color: #00a9e0 !important;
+  color: #fff !important;
+  padding: 5px 12px;
+  letter-spacing: 0.25px;
+  margin-top: 15px !important;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 700; }
+  .card-component a:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 10px solid white;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    float: left;
+    margin-right: 10px;
+    margin-top: 4px; }
 .card-component.card-component-theme-white {
   border: 0 !important; }
   .card-component.card-component-theme-white:hover {
@@ -133,25 +159,5 @@ div.button-grid {
       font-size: 21px; }
       .card-component .card-component-padded p span + br {
         line-height: 2; }
-  .card-component .card-component-padded a {
-    background-color: #00a9e0 !important;
-    color: #fff !important;
-    padding: 5px 12px;
-    letter-spacing: 0.25px;
-    margin-top: 15px !important;
-    display: inline-block;
-    text-transform: uppercase;
-    font-weight: 700; }
-    .card-component .card-component-padded a:before {
-      content: '';
-      display: block;
-      width: 0;
-      height: 0;
-      border-left: 10px solid white;
-      border-top: 10px solid transparent;
-      border-bottom: 10px solid transparent;
-      float: left;
-      margin-right: 10px;
-      margin-top: 4px; }
 
 /*# sourceMappingURL=index.css.map */
